@@ -6,7 +6,7 @@ const artistrouter = express.Router()
 artistrouter
 .get("/artist/:id", getArtist)
 .get("/artists", getArtists)
-.post("/createartist", createArtist)
+.post("/artistcreate", createArtist)
 .delete("/delete", deleteArtist)
 
 module.exports = artistrouter
