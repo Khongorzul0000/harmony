@@ -1,0 +1,85 @@
+:root{
+    --light-color: #DFE3EE;
+    --ocean-color: #5CD2C6;
+}
+.back{
+    width: calc(100vw - 420px);
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    width: calc(100% - 20px);
+    height: calc(100vh - 20px);
+    background-color: #141414;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.big_img{
+    background-image: url("../images/song.png");
+    height: auto;
+    background-size:cover ;
+    background-repeat: no-repeat;
+    width: 70%;
+    border-radius: 20px;
+    margin-top: 80px;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(39, 39, 39, 0.4);
+    min-height: 500px;
+    border-radius: 20px;
+}
+.wait{
+    display: flex;
+}
+.main{
+    overflow-y: scroll;
+}
+.play_part{
+    width: 1320px;
+    height: 200px;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+}
+.create_playlist{
+    min-width: 200px;
+    max-width: 200px;
+    height: 300px;
+    /* background-color: #991212; */
+    background-color: #333232;
+    padding: 20px;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+.create{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+.icon{
+    color: white;
+    font-size: 40px;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+.icon:hover{
+    color: rgba(255, 255, 255, 0.5);
+    box-shadow: 1px 2px 4px 1px rgba(58, 57, 57, 0.7);
+    transition: .4s;
+}

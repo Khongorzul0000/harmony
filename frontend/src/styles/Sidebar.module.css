@@ -1,0 +1,107 @@
+:root{
+    --light-color: #DFE3EE;
+    --ocean-color: #5CD2C6;
+    --deep-color:#363753;
+}
+
+.sidebar{
+    height: 100vh;
+    width: 420px;
+    background-color:black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.9vh;
+}
+.section{
+    height: 20vh;
+    width: 400px;
+    background-color: #141414;
+    border-radius: 5px;
+    display: flex;
+    padding-left: 18px;
+}
+.play_section{
+    height: 77.5vh;
+    width: 400px;
+    background-color: #141414;
+    border-radius: 5px;
+    padding-left: 18px;
+}
+.icon{
+    color: white;
+    font-size: 30px;
+}
+.icon1{
+    color: #991212;
+    font-size: 40px;
+}
+.link{
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    padding-bottom: 0;
+	font-weight: bold;
+    margin-left: 10px;
+}
+.section ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+.play_section ul{
+    margin-top: 25px;
+    list-style-type: none;
+}
+.list_sec{
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    margin-top: 30px;
+    overflow-y: scroll;
+    height: 66vh;
+}
+.li{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.card{
+    width: 100%;
+    height: 55px;
+    display: flex;
+}
+.play_img{
+    height: 55px;
+    width: 55px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.playlist{
+    color: white;
+    font-size: 19px;
+}
+.user{
+    color: rgb(192, 192, 192);
+    font-size: 14px;
+}
+.length{
+    color: rgb(192, 192, 192);
+    font-size: 14px;
+}
+.bot{
+    display: flex;
+    gap: 10px;
+}
+.second{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.line{
+    width: 95%;
+    height: 0.1px;
+    background-color: white;
+}
