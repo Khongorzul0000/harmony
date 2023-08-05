@@ -19,12 +19,21 @@ const getUsers = async (req, res) =>{
 
 const loginUser = async (req, res) =>{
     const {username, password} = req.body
-    const user = await User.findOne({username}) 
+    const user = await User.findOne({username:username}) 
 
-    if(!user.password === password){
-        res.send(user)
+    // if(user.password === password){
+    //     res.json("success")
+    // }else{
+    //     res.json("the password is incorrect")
+    // }
+    if(user){
+        if(user.password === password){
+            res.json("success")
+        }else{
+            res.json("password is incorrect")
+        }
     }else{
-        res.status(401).json({message:"User or username is unvalid"})
+        res.json("no record existed")
     }
 }
 

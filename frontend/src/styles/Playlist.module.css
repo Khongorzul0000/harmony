@@ -4,13 +4,14 @@
     display: flex;
 }
 .play_img{
-    height: 55px;
-    border-radius: 10px;
+    height: 50px;
+    border-radius: 5px;
     margin-right: 10px;
 }
 .playlist{
     color: white;
     font-size: 19px;
+    font-weight: bold;
 }
 .user{
     color: rgb(192, 192, 192);
@@ -28,4 +29,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+@media only screen and (max-width: 1600px) {
+    .playlist{
+        font-size: 17px;
+    }
 }

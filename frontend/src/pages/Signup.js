@@ -2,8 +2,17 @@ import styles from "../styles/Signup.module.css";
 import { HiOutlineMail } from "react-icons/hi";
 import { AiOutlineUser } from "react-icons/ai";
 import { BiLockAlt } from "react-icons/bi";
+import { useState } from "react";
 
 export const Signup = () => {
+  const [name, setName] = useState()
+  const [email, setEmail] = useState()
+  const [password, setPassword] = useState()
+
+  const handleSubmit = (e) =>{
+    e.preventDefault()
+  }
+
   return (
     <>
       <div className={styles.big_img}>
@@ -17,6 +26,7 @@ export const Signup = () => {
                 <input
                   className={styles.input_field}
                   placeholder="Username"
+                  onChange={(e) =>setName(e.target.value)}
                 ></input>
                 <AiOutlineUser className={styles.icon} />
               </div>
@@ -24,6 +34,7 @@ export const Signup = () => {
                 <input
                   className={styles.input_field}
                   placeholder="Email"
+                  onChange={(e) =>setEmail(e.target.value)}
                 ></input>
                 <HiOutlineMail className={styles.icon} />
               </div>
@@ -31,6 +42,7 @@ export const Signup = () => {
                 <input
                   className={styles.input_field}
                   placeholder="Password"
+                  onChange={(e) =>setPassword(e.target.value)}
                 ></input>
                 <BiLockAlt className={styles.icon} />
               </div>

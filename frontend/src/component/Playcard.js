@@ -5,10 +5,10 @@ export const Playcard = () =>{
     return(
         <>
         <div className={styles.card}>
-            <img src={play} className={styles.img}></img>
+            <img src={play} className={styles.img} alt="play"></img>
             <div className={styles.text}>
                 <p className={styles.name}>Playlist1</p>
-                <p className={styles.des}>description jhkj shg shgs shgsmhg</p>
+                <p className={styles.des}>description</p>
             </div>
         </div>
         </>

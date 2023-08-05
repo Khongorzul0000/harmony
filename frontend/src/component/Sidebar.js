@@ -5,62 +5,84 @@ import { FaUserCircle } from "react-icons/fa";
 import { SiApplemusic } from "react-icons/si";
 import { Playlist } from "../component/Playlist";
 import flower from "../images/flower.jpg";
+import { Home, MyAccount, Login, Signup } from "../pages";
+import { Link } from "react-router-dom";
+import { Routes, BrowserRouter, Route } from "react-router-dom";
 
 export const Sidebar = () => {
   return (
-    <>
-      <div>
-        <div className={styles.sidebar}>
-          <div className={styles.section}>
-            <ul>
-              <li className={styles.li}>
-                <SiApplemusic className={styles.icon1} />
-                <h1 href="#" className={styles.link}>
-                  Harmony.
-                </h1>
-              </li>
-              <li className={styles.li}>
-                <AiFillHome className={styles.icon} />
-                <a href="#" className={styles.link}>
-                  Home
-                </a>
-              </li>
-              <li className={styles.li}>
-                <FaUserCircle className={styles.icon} />
-                <a href="#" className={styles.link}>
-                  My Profile
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className={styles.play_section}>
-            <ul>
-              <li>
-                <BiLibrary className={styles.icon} />
-                <a href="#" className={styles.link}>
-                  Library
-                </a>
-              </li>
-            </ul>
-            <div className={styles.list_sec}>
-              <div className={styles.card}>
-                <img className={styles.play_img} src={flower}></img>
-                <div className={styles.second}>
-                  <p className={styles.playlist}>Liked Songs</p>
-                  <div className={styles.bot}>
-                    <p className={styles.user}>:playlist</p>
-                    <p  className={styles.length}>5 songs</p>
+    <div className={styles.di}>
+      <BrowserRouter>
+        <div className={styles.wait}>
+          <div className={styles.sidebar}>
+            <div className={styles.section}>
+              <ul>
+                <li className={styles.li}>
+                  <SiApplemusic className={styles.icon1} />
+                  <p className={styles.link}>Harmony.</p>
+                </li>
+                <li className={styles.li}>
+                  <AiFillHome className={styles.icon} />
+                  <Link to="Home" className={styles.link0}>
+                    Home
+                  </Link>
+                </li>
+                <li className={styles.li}>
+                  <FaUserCircle className={styles.icon} />
+                  <Link to="My-account" className={styles.link0}>
+                    My Profile
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div className={styles.play_section}>
+              <ul>
+                <li className={styles.li}>
+                  <BiLibrary className={styles.icon} />
+                  <p href="#" className={styles.link}>
+                    Library
+                  </p>
+                </li>
+              </ul>
+              <div className={styles.list_sec}>
+                <div className={styles.card}>
+                  <img className={styles.play_img} src={flower} alt="flower"></img>
+                  <div className={styles.second}>
+                    <p className={styles.playlist}>Liked Songs</p>
+                    <div className={styles.bot}>
+                      <p className={styles.user}>:playlist</p>
+                      <p className={styles.length}>5 songs</p>
+                    </div>
                   </div>
                 </div>
+                <div className={styles.line}></div>
+                {new Array(6).fill(0).map((_, index) => (
+                  <Playlist index={index} />
+                ))}
+                {/* <div className={styles.btns}>
+                  <button className={styles.btn}>
+                    <Link to="sign-up" className={styles.link}>
+                      Sign Up
+                    </Link>
+                  </button>
+                  <button className={styles.btn}>
+                    <Link to="login" className={styles.link}>
+                      Sign In
+                    </Link>
+                  </button>
+                </div> */}
               </div>
-              <div className={styles.line}></div>
-              {new Array(20).fill(0).map((_, index) => (
-                <Playlist index={index} />
-              ))}
             </div>
           </div>
         </div>
-      </div>
-    </>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Home" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/sign-up" element={<Signup />} />
+          <Route path="/My-account" element={<MyAccount />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 };

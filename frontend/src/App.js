@@ -1,27 +1,8 @@
-import { Navbar, Playlist , Sidebar, Playcard, Addpopup} from "./component";
-import { Home, Login, MyAccount, Signup } from "./pages";
-import { Routes, BrowserRouter, Route } from "react-router-dom";
+import { Sidebar } from "./component";
+import { Signup } from "./pages";
 
 function App() {
-  return (
-    <BrowserRouter>
-    <div>
-      <section>
-        <Routes>
-          <Route path="/" element={<Navbar/>}/>
-          <Route path="/home" element={<Home/>}/>
-          <Route path="/play" element={<Playlist/>}/>
-          <Route path="/side" element={<Sidebar/>}/>
-          <Route path="/login" element={<Login/>}/>
-          <Route path="/sign" element={<Signup/>}/>
-          <Route path="/card" element={<Playcard/>}/>
-          <Route path="/add" element={<Addpopup/>}/>
-          <Route path="/my" element={<MyAccount/>}/>
-        </Routes>
-      </section>
-    </div>
-  </BrowserRouter>
-  );
+  return <Signup />;
 }
 
 export default App;

@@ -36,18 +36,16 @@
     min-height: 500px;
     border-radius: 20px;
 }
-.wait{
-    display: flex;
-}
-.main{
+ .main{
     overflow-y: scroll;
 }
 .play_part{
-    width: 1320px;
+    width: 97%;
     height: 200px;
     margin-top: 40px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .card{
     width: 200px;
@@ -58,7 +56,6 @@
     min-width: 200px;
     max-width: 200px;
     height: 300px;
-    /* background-color: #991212; */
     background-color: #333232;
     padding: 20px;
     border-radius: 5px;
@@ -82,4 +79,56 @@
     color: rgba(255, 255, 255, 0.5);
     box-shadow: 1px 2px 4px 1px rgba(58, 57, 57, 0.7);
     transition: .4s;
+}
+@media only screen and (max-width: 1600px) {
+    .back{
+        width: 72vw;
+    }
+    .main{
+        width: 98%;
+    }
+    .big_img{
+        background-image: url("../images/song.png");
+        height: auto;
+        background-size:cover ;
+        background-repeat: no-repeat;
+        width: 80%;
+        height: 45%;
+        background-position: center;
+        border-radius: 20px;
+        margin-top: 80px;
+    }
+    .wrapper{
+        min-height: 100%;
+    }
+    .play_part{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .create_playlist{
+        min-width: 180px;
+        max-width: 180px;
+        height: 270px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .icon{
+        margin: 0;
+        margin-top: 20px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .big_img{
+        background-image: url("../images/song.png");
+        height: auto;
+        background-size:cover ;
+        background-repeat: no-repeat;
+        width: 70%;
+        height: 35%;
+        background-position: center;
+        border-radius: 20px;
+        margin-top: 80px;
+    }
 }

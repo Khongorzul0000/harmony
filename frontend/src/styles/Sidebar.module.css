@@ -3,7 +3,12 @@
     --ocean-color: #5CD2C6;
     --deep-color:#363753;
 }
-
+.di{
+    display: flex;
+}
+.wait{
+    display: flex;
+}
 .sidebar{
     height: 100vh;
     width: 420px;
@@ -15,7 +20,7 @@
     gap: 0.9vh;
 }
 .section{
-    height: 20vh;
+    height: 23vh;
     width: 400px;
     background-color: #141414;
     border-radius: 5px;
@@ -23,7 +28,7 @@
     padding-left: 18px;
 }
 .play_section{
-    height: 77.5vh;
+    height: 74.5vh;
     width: 400px;
     background-color: #141414;
     border-radius: 5px;
@@ -45,6 +50,18 @@
 	font-weight: bold;
     margin-left: 10px;
 }
+.link0{
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    padding-bottom: 0;
+	font-weight: bold;
+    margin-left: 10px;
+    transition: .3s;
+}
+.link0:hover{
+    color: #991212;
+}
 .section ul{
     display: flex;
     flex-direction: column;
@@ -61,7 +78,7 @@
     gap: 13px;
     margin-top: 30px;
     overflow-y: scroll;
-    height: 66vh;
+    height: 62.5vh;
 }
 .li{
     display: flex;
@@ -74,14 +91,15 @@
     display: flex;
 }
 .play_img{
-    height: 55px;
-    width: 55px;
-    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
     margin-right: 10px;
 }
 .playlist{
     color: white;
     font-size: 19px;
+    font-weight: bold;
 }
 .user{
     color: rgb(192, 192, 192);
@@ -104,4 +122,47 @@
     width: 95%;
     height: 0.1px;
     background-color: white;
+}
+.btn{
+	width: 130px;
+    height: 40px;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.4);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s ease;
+    margin-right: 20px;
+}
+.btn:hover{
+    background: rgba(255, 255, 255, 0.3);
+}
+.btn:active{
+	opacity: 0.6;
+}
+/* .btns{
+    display: none;
+} */
+@media only screen and (max-width: 1600px) {
+    .sidebar{
+        width: 28vw;
+    }
+    .section{
+        width: 95%;
+    }
+    .play_section{
+        width: 95%;
+    }
+    .link{
+        font-size: 16px;
+    }
+    .li h1{
+        font-size: 20px;
+    }
+    .icon{
+        font-size: 25px;
+    }
+    .playlist{
+        font-size: 17px;
+    }
 }
