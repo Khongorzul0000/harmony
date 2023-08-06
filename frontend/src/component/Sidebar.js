@@ -5,14 +5,12 @@ import { FaUserCircle } from "react-icons/fa";
 import { SiApplemusic } from "react-icons/si";
 import { Playlist } from "../component/Playlist";
 import flower from "../images/flower.jpg";
-import { Home, MyAccount, Login, Signup } from "../pages";
 import { Link } from "react-router-dom";
-import { Routes, BrowserRouter, Route } from "react-router-dom";
+import { PlaylistPage } from "../pages";
 
 export const Sidebar = () => {
   return (
     <div className={styles.di}>
-      <BrowserRouter>
         <div className={styles.wait}>
           <div className={styles.sidebar}>
             <div className={styles.section}>
@@ -23,13 +21,13 @@ export const Sidebar = () => {
                 </li>
                 <li className={styles.li}>
                   <AiFillHome className={styles.icon} />
-                  <Link to="Home" className={styles.link0}>
+                  <Link to="home" className={styles.link0}>
                     Home
                   </Link>
                 </li>
                 <li className={styles.li}>
                   <FaUserCircle className={styles.icon} />
-                  <Link to="My-account" className={styles.link0}>
+                  <Link to="my-account" className={styles.link0}>
                     My Profile
                   </Link>
                 </li>
@@ -75,14 +73,7 @@ export const Sidebar = () => {
             </div>
           </div>
         </div>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Home" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/sign-up" element={<Signup />} />
-          <Route path="/My-account" element={<MyAccount />} />
-        </Routes>
-      </BrowserRouter>
+        <PlaylistPage/>
     </div>
   );
 };

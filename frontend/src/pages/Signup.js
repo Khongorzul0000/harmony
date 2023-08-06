@@ -3,14 +3,21 @@ import { HiOutlineMail } from "react-icons/hi";
 import { AiOutlineUser } from "react-icons/ai";
 import { BiLockAlt } from "react-icons/bi";
 import { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export const Signup = () => {
-  const [name, setName] = useState()
-  const [email, setEmail] = useState()
-  const [password, setPassword] = useState()
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const navigate = useNavigate 
 
   const handleSubmit = (e) =>{
     e.preventDefault()
+    axios
+    .post('http://localhost:8888/usercreate', {name, email, password})
+    .then(result => console.log(result))
+    .catch(err =>console.log(err))
   }
 
   return (
@@ -33,7 +40,7 @@ export const Signup = () => {
               <div>
                 <input
                   className={styles.input_field}
-                  placeholder="Email"
+                  placeholder="Email@gmail.com"
                   onChange={(e) =>setEmail(e.target.value)}
                 ></input>
                 <HiOutlineMail className={styles.icon} />
@@ -41,7 +48,7 @@ export const Signup = () => {
               <div>
                 <input
                   className={styles.input_field}
-                  placeholder="Password"
+                  placeholder="Password character must be more than 8"
                   onChange={(e) =>setPassword(e.target.value)}
                 ></input>
                 <BiLockAlt className={styles.icon} />
@@ -53,11 +60,11 @@ export const Signup = () => {
                 </div>
               </div>
               <div>
-                <button className={styles.btn}>Sign Up</button>
+                <button className={styles.btn} onClick={handleSubmit}>Sign Up</button>
               </div>
             </div>
             <span className={styles.account}>
-              Have a account?<a href="login" style={{color:"white", marginLeft:"10px"}}>Login</a>
+              Have a account?<a href="/login" style={{color:"white", marginLeft:"10px"}}>Login</a>
             </span>
           </div>
         </div>

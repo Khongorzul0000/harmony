@@ -1,7 +1,7 @@
 import styles from "../styles/Login.module.css";
 import { HiOutlineMail } from "react-icons/hi";
-import { AiOutlineUser } from "react-icons/ai";
 import { BiLockAlt } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 export const Login = () => {
   return (
@@ -41,7 +41,7 @@ export const Login = () => {
               </div>
             </div>
             <span className={styles.account}>
-              Don't have a account?<a href="sign" style={{color:"white", marginLeft:"10px"}}>Sign Up</a>
+              Don't have a account?<a href="/sign-up" style={{color:"white", marginLeft:"10px"}}>Sign Up</a>
             </span>
           </div>
         </div>

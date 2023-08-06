@@ -31,6 +31,7 @@
     border-radius: 15px;
     backdrop-filter: blur(7px);
     padding: 40px;
+    border: 0.5px solid white;
 }
 .blur{
     padding: 10px;
@@ -52,7 +53,7 @@
     transition: .2s ease;
 }
 .input_field::placeholder{
-    color: white;
+    color: rgb(197, 196, 196);
 }
 .input_field:hover, .input_field:focus{
     background-color:  rgb(225, 225, 225, 0.25);
@@ -88,16 +89,20 @@
     background: rgba(255, 255, 255, 0.5);
     box-shadow: 1px 2px 4px 1px rgba(58, 57, 57, 0.7);
 }
+.btn:active{
+    background-color: rgb(187, 187, 187);
+}
 @media only screen and (max-width: 900px) {
     .block{
         width: 460px;
-        height: 400px;
+        height: 480px;
     }
 }
 @media only screen and (max-width: 510px) {
     .block{
         backdrop-filter: blur(0);
         padding: 20px;
+        border: 0;
     }
     .rem_sec p{
         font-size: 14px;
@@ -107,5 +112,12 @@
     }
     .account{
         font-size: 14px;
+    }
+    .input_field{
+        padding: 0 20px 0 40px;
+        height: 45px;
+    }
+    .title{
+        font-size: 25px;
     }
 }
