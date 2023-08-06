@@ -37,4 +37,10 @@ const loginUser = async (req, res) =>{
     }
 }
 
-module.exports = {createUser, getUser, getUsers, loginUser}
+const deleteUser = async (req, res) =>{
+    const id = req.params.id
+    const result = await User.findByIdAndDelete({_id:id})
+    res.send(result)
+}
+
+module.exports = {createUser, getUser, getUsers, loginUser, deleteUser}

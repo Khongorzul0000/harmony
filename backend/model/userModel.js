@@ -8,7 +8,9 @@ const userSchema = new Schema ({
         type:String
     },
     password:{
-        type:String
+        type:String,
+        minlength:[8, 'Minimum password length is 8 character'],
+        required:true
     },
     createdAt:{
         type:Date,

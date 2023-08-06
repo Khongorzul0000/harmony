@@ -1,5 +1,5 @@
 const express = require("express")
-const {createUser, getUser, getUsers, loginUser} = require("../controller/userController")
+const {createUser, getUser, getUsers, loginUser, deleteUser} = require("../controller/userController")
 
 const userrouter = express.Router()
 
@@ -8,5 +8,6 @@ userrouter
 .get("/user/:id", getUser)
 .get("/users", getUsers)
 .post("/usercreate", createUser)
+.delete("/userdelete/:id", deleteUser)
 
 module.exports = userrouter
