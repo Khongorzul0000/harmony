@@ -5,3 +5,4 @@ export * from "./Song";
 export * from "./Sidebar";
 export * from "./Addpopup";
 export * from "./Songlist"
+export * from "./Default"

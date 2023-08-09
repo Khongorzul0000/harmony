@@ -41,11 +41,10 @@
 }
 .play_part{
     width: 97%;
-    height: 200px;
     margin-top: 40px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+
 }
 .card{
     width: 200px;
@@ -79,6 +78,16 @@
     color: rgba(255, 255, 255, 0.5);
     box-shadow: 1px 2px 4px 1px rgba(58, 57, 57, 0.7);
     transition: .4s;
+}
+.rec_tit{
+    color: white;
+    margin: 30px 0 30px 20px;
+}
+.rec{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
 }
 @media only screen and (max-width: 1600px) {
     .back{

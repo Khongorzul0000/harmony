@@ -1,7 +1,6 @@
 import styles from "../styles/Login.module.css";
 import { HiOutlineMail } from "react-icons/hi";
 import { BiLockAlt } from "react-icons/bi";
-import { Link } from "react-router-dom";
 
 export const Login = () => {
   return (

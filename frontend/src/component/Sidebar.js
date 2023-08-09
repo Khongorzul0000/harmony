@@ -6,7 +6,7 @@ import { SiApplemusic } from "react-icons/si";
 import { Playlist } from "../component/Playlist";
 import flower from "../images/flower.jpg";
 import { Link } from "react-router-dom";
-import { PlaylistPage } from "../pages";
+import { Home, PlaylistPage } from "../pages";
 
 export const Sidebar = () => {
   return (
@@ -73,7 +73,7 @@ export const Sidebar = () => {
             </div>
           </div>
         </div>
-        <PlaylistPage/>
+        <Home/>
     </div>
   );
 };

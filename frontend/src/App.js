@@ -1,5 +1,5 @@
 import { Signup, Login, Home, MyAccount, PlaylistPage } from "./pages";
-import { Songlist, Sidebar } from "./component";
+import { Songlist, Sidebar, Default } from "./component";
 import { Routes, BrowserRouter, Route } from "react-router-dom";
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
           <Route path="/my-account" element={<MyAccount />} />
           <Route path="/song" element={<Songlist />} />
           <Route path="/pp" element={<PlaylistPage />} />
+          <Route path="/rec" element={<Default />} />
         </Routes>
       </BrowserRouter>
     </>
